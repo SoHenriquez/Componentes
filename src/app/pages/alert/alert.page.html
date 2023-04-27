@@ -1,0 +1,19 @@
+<app-header titulo="alert"></app-header>
+
+
+<ion-content [fullscreen]="true" color="secundary">
+  <ion-list *ngFor="let item of lista" >
+    <ion-item class="ion-text-capitalize">
+      {{ item }}
+      <ion-checkbox slot="end"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+  <ion-button slot="end" id="open-action-sheet" color="success">
+        options
+  </ion-button>
+<ion-action-sheet
+  trigger="open-action-sheet"
+  header="Actions"
+  [buttons]="actionSheetButtons"
+></ion-action-sheet>
+</ion-content>
